@@ -1,8 +1,11 @@
-# RNA-seq-analysis
-# Beginner guide Differential Gene Expression Analysis using DESeq2
+# Bulk RNA_Seq_Analysis
+## Beginner guide to learn how to use Bioinformatics tools and interpret results and understand Differential Gene Expression Analysis using DESeq2
 
-This repository contains an R Markdown workflow that performs differential gene expression (DGE) analysis on RNA-seq data using the **DESeq2** package in R. The analysis uses the `airway` dataset, a publicly available RNA-seq dataset bundled with Bioconductor.
+Overview:
 
+This project aims to show a complete Bulk RNA-Seq workflow from Raw sequencing data up to differential genes expression (DEGS) analysis using DESeq2. The analysis uses the `airway` dataset, a publicly available RNA-seq dataset bundled with Bioconductor.
+
+For each human airway smooth muscle cell lines, Dexamethasone vs Untreated was compared to identify genes that responded to dexamethasone treatment.
 ---
 
 ## 📁 Files
