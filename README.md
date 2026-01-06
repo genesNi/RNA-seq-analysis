@@ -75,7 +75,7 @@ Undersatnding Normal Distribution ()
 for understanding your fastqc reports better (https://sequencing.qcfail.com )
 
 # Read Trimming: 
-Tools we have : Trimmomatic , Cutadapt, Fastp(launched in 2019)
+Multiple tools we have  : Trimmomatic , Cutadapt, Fastp(launched in 2019) choosing a tool requires remembering your RAM, how fast it can process an output for you and how easily it can be downloaded and used.
 These tools have function of trimming reads either from head or trail , remove adapters, remove any poor quality base etc 
 
 On the basis of reading your Multiqc Report you can decide whether or not trimming is required.
@@ -83,11 +83,38 @@ Few things which can be noticed:
 
 
   * Trimmomatic Manual: (http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf)
-  * Cutadapt Manual: ()
-  * Fastp Manual: ()
-    
+  * Cutadapt Manual: (https://cutadapt.readthedocs.io/en/stable/)
+  * Fastp Manual: (https://open.bioqueue.org/home/knowledge/showKnowledge/sig/fastp)
+
+
  
- # Technical Replicates 
+ # What is Technical Replicates:
+
+ 
+ if your datasets has multiple technical replicates for each sample then you might would require to concatinate those separate files, as done in (https://github.com/tiashaghosh024-dotcom/Bulk-RNA-seq-project)
+
+# Alignment 
+After checking the quality of reads we need to align it to reference Genome or Transcriptome.
+Multiple tools we have but are categories on the basis of what it aligns to, Genome (STAR, HISAT2) or Transcriptome : Aligners (Bowtie2, BWA) , Quasi-mappers (Salmon, Kallisto)
+
++ Remember to use tools according to the technology used whether Reads are short read or Long
++ how fast tool works and what minimum RAM it takes
++ what is the need of your experiment
+
+##### Reference Genome have types: read (https://www.nature.com/articles/s41592-025-02850-9)
+Databases for downloading reference Genomes are many, watch (https://youtu.be/eIVlSG11umQ?si=RVUrztO8cmSVrskn)
+  
+All of these tools require Genome Indexes either you can build index on your terminal or download Genome indexes from their websites according to the organism used in your dataset
+  
+* STAR : (https://physiology.med.cornell.edu/faculty/skrabanek/lab/angsd/lecture_notes/STARmanual.pdf)
+* HISAT2: (https://daehwankimlab.github.io/hisat2/manual/)
+* Bowtie2: (https://bowtie-bio.sourceforge.net/bowtie2/manual.shtml)
+* Salmon: (https://app.readthedocs.org/projects/salmon/downloads/pdf/stable/)
+
+# Quantification
+After Alignment we need to count which genes expressed what number of reads.
+we have multiple tools for that : htseq-counts, feature-counts, RSEM
+
 
 ## 🧪 Analysis Overview
 
