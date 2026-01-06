@@ -17,11 +17,14 @@ prefetch SRR1039508
 
 # Converting to fastq
 fastq-dump --outdir fastq --gzip --skip-technical --readids \
---read-filter pass --dumpbase --split-3 --clip SRR1039508.sra ```
+--read-filter pass --dumpbase --split-3 --clip SRR1039508.sra
+```
 
 3. From your sample copy the Bioproject ID and Open European Nucleotide Archive (ENA) website and paste it, you will get all the samples already present in fastq.gz format and can be simply downloaded using donwload sample tab or get download script tab which will give whole address which can be pasted to terminal and samples can be downloaded. (BEST OPTION FOR MAC M1 USERS)
 
-``` wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/008/SRR1039508/SRR1039508_1.fastq.gz```
+``` wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/008/SRR1039508/SRR1039508_1.fastq.gz
+```
+
 
 ## Output :
 
@@ -34,7 +37,8 @@ SRR1039509_2.fastq.gz		SRR1039520_1.fastq.gz
 SRR1039512_1.fastq.gz		SRR1039520_2.fastq.gz
 SRR1039512_2.fastq.gz		SRR1039521_1.fastq.gz
 SRR1039513_1.fastq.gz		SRR1039521_2.fastq.gz
-SRR1039513_2.fastq.gz ```
+SRR1039513_2.fastq.gz
+```
 
 
 4.Another tool which works the best is fastqdl which works way faster than fasterqdump but does not works on MAC M1's yet (https://youtu.be/3A-VrGAu7d4?si=9TcyBNVbHJqONynC )
