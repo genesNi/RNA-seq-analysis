@@ -12,7 +12,8 @@ for each human airway smooth muscle cell lines, Dexamethasone vs Untreated was c
 
 2. Convert .sra → .fastq.gz using fastq-dump (or fasterq-dump) The .sra format is not directly usable by downstream RNA-seq tools such as FastQC or HISAT2.These tools require reads in FASTQ format, which contains: nucleotide sequences, per-base quality scores, identifiers. Therefore, each .sra file must be converted into .fastq (or better, .fastq.gz for compression). (WORKS GREAT ON ANY SYSTEM OTHER THAN MAC M1 M2 , BUT IF THEY WORK ON THESE THINGS LATER IT WILL BE HELPFUL , IN 2025 IT DIDN'T GOT FIXED)
 
-``` sudo apt install sra-toolkit
+```
+sudo apt install sra-toolkit
 prefetch SRR1039508
 
 # Converting to fastq
