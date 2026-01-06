@@ -6,7 +6,13 @@ Overview:
 This project aims to show a complete Bulk RNA-Seq workflow from Raw sequencing data up to differential genes expression (DEGS) analysis using DESeq2. The analysis uses the `airway` dataset, a publicly available RNA-seq dataset bundled with Bioconductor.
 for each human airway smooth muscle cell lines, Dexamethasone vs Untreated was compared to identify genes that responded to dexamethasone treatment.
 
----
+
+# Data Sourcing
+1. Download raw sequencing data (.sra files) using SRA toolkit. Raw RNA-seq datasets submitted to the NCBI Sequence Read Archive are stored in a compressed binary format called .sra. To begin any bulk RNA-seq workflow, the first step is obtaining these files from SRA using tools such as prefetch.
+
+2. Convert .sra → .fastq.gz using fastq-dump (or fasterq-dump) The .sra format is not directly usable by downstream RNA-seq tools such as FastQC or HISAT2.These tools require reads in FASTQ format, which contains: nucleotide sequences, per-base quality scores, identifiers. Therefore, each .sra file must be converted into .fastq (or better, .fastq.gz for compression).
+
+
 
 ## 📁 Files
 
