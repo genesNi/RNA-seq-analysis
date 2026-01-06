@@ -49,7 +49,7 @@ SRR1039513_2.fastq.gz      SRR1039521_2.fastq.gz
 # Quality Control Using tool Fastqc
 we need to know the quality of reads whether or not it needs trimming. Reading multiple fastqc files is not possible so we first get all the fastqc files and then use another tool Multiqc to get a combined report about all the samples.
 
-![fastqc](<img width="1325" height="915" alt="fastqc" src="https://github.com/user-attachments/assets/7ed30595-6863-4177-8eb8-f68cface7133" />)
+![fastqc](https://github.com/genesNi/RNA-seq-analysis/blob/main/fastqc.png)
 
 ![multiqc](<img width="1726" height="935" alt="multiqc" src="https://github.com/user-attachments/assets/cc32aa87-391c-4f1c-9580-ed8170dbd021" />)
 
