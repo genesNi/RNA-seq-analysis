@@ -20,35 +20,39 @@ prefetch SRR1039508
    fastq-dump --outdir fastq --gzip --skip-technical --readids \
    --read-filter pass --dumpbase --split-3 --clip SRR1039508.sra
 ```
-
+* loop for downloading many samples
 
 3. From your sample copy the Bioproject ID and Open European Nucleotide Archive (ENA) website and paste it, you will get all the samples already present in fastq.gz format and can be simply downloaded using donwload sample tab or get download script tab which will give whole address which can be pasted to terminal and samples can be downloaded. (BEST OPTION FOR MAC M1 USERS)
 
-   wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/008/SRR1039508/SRR1039508_1.fastq.gz
+* on a normal txt file just save all your urls and then use xargs 
 
+```
+cat airway_ena_url.txt | xargs -n 1 -P 3 wget -c
+```
 ## Output :
 
-(airway) MacBook-Pro:data megha$ ls
-sratoolkit.3.3.0-mac-x86_64	SRR1039516_1.fastq.gz
-SRR1039508_1.fastq.gz		SRR1039516_2.fastq.gz
-SRR1039508_2.fastq.gz		SRR1039517_1.fastq.gz
-SRR1039509_1.fastq.gz		SRR1039517_2.fastq.gz
-SRR1039509_2.fastq.gz		SRR1039520_1.fastq.gz
-SRR1039512_1.fastq.gz		SRR1039520_2.fastq.gz
-SRR1039512_2.fastq.gz		SRR1039521_1.fastq.gz
-SRR1039513_1.fastq.gz		SRR1039521_2.fastq.gz
-SRR1039513_2.fastq.gz
+```
+(airway) MacBook-Pro:data megha$ ls	
+SRR1039508_1.fastq.gz		SRR1039516_1.fastq.gz
+SRR1039508_2.fastq.gz		SRR1039516_2.fastq.gz
+SRR1039509_1.fastq.gz		SRR1039517_1.fastq.gz
+SRR1039509_2.fastq.gz		SRR1039517_2.fastq.gz
+SRR1039512_1.fastq.gz		SRR1039520_1.fastq.gz
+SRR1039512_2.fastq.gz		SRR1039520_2.fastq.gz
+SRR1039513_1.fastq.gz		SRR1039521_1.fastq.gz
+SRR1039513_2.fastq.gz      SRR1039521_2.fastq.gz
 
-
+```
 
 4.Another tool which works the best is fastqdl which works way faster than fasterqdump but does not works on MAC M1's yet (https://youtu.be/3A-VrGAu7d4?si=9TcyBNVbHJqONynC )
 
-## 📁 Files
+# Quality Control Using tool Fastqc
+we need to know the quality of reads whether or not it needs trimming. Reading multiple fastqc files is not possible so we first get all the fastqc files and then use another tool Multiqc to get a combined report about all the samples.
 
-- `DESeq2_SA_MEGHA.Rmd` – R Markdown file containing the full analysis pipeline.
-- `README.md` – Project overview and usage instructions.
+![fastqc](<img width="1325" height="915" alt="fastqc" src="https://github.com/user-attachments/assets/7ed30595-6863-4177-8eb8-f68cface7133" />)
 
----
+![multiqc](<img width="1726" height="935" alt="multiqc" src="https://github.com/user-attachments/assets/cc32aa87-391c-4f1c-9580-ed8170dbd021" />)
+
 
 ## 🧪 Analysis Overview
 
