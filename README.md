@@ -51,7 +51,7 @@ we need to know the quality of reads whether or not it needs trimming. Reading m
 
 ![fastqc](https://github.com/genesNi/RNA-seq-analysis/blob/main/fastqc.png)
 
-![multiqc](<img width="1726" height="935" alt="multiqc" src="https://github.com/user-attachments/assets/cc32aa87-391c-4f1c-9580-ed8170dbd021" />)
+![multiqc](https://github.com/genesNi/RNA-seq-analysis/blob/main/multiqc.png)
 
 
 ## 🧪 Analysis Overview
