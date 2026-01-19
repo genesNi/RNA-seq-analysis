@@ -21,6 +21,8 @@ if you are starting out with 4 or 8 GB RAM you should work with very small datas
 for this dataset 8 GB RAM would work fine but do remember to keep your samples compressed , but sometimes some tools might require uncompressed form then work in sections do not work with all samples together.
 if you have option start out with 16 GB RAM 
 
+# Read this paper before starting out: https://link.springer.com/article/10.1186/s13059-016-0881-8#Fig2
+
 # Data Sourcing
 Opt 1. Download raw sequencing data (FASTA FILES) using SRA toolkit. Raw RNA-seq datasets submitted to the NCBI Sequence Read Archive are stored in a compressed binary format called .sra. To begin any bulk RNA-seq workflow, the first step is obtaining these files from SRA using tools such as prefetch.
 
