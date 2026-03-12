@@ -1,6 +1,8 @@
 # Bulk RNA_Seq_Analysis
 ## Beginner guide to learn how to use Bioinformatics tools and interpret results and understand Differential Gene Expression Analysis using DESeq2
 
+# Brief History of Bioinformatics: https://academic.oup.com/bib/article/20/6/1981/5066445?login=false
+
 Overview:
 
 This project aims to show a complete Bulk RNA-Seq workflow from Raw sequencing data up to differential genes expression (DEGS) analysis using DESeq2. The analysis uses the `airway` dataset, a publicly available RNA-seq dataset bundled with Bioconductor.
