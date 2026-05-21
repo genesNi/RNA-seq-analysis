@@ -72,11 +72,26 @@ Reading multiple fastqc files is not possible so we first get all the fastqc fil
 Undersatnding Box Pot ()
 Undersatnding Normal Distribution ()
 
+
 ![fastqc](https://github.com/genesNi/RNA-seq-analysis/blob/main/fastqc.png)
 
 ![multiqc](https://github.com/genesNi/RNA-seq-analysis/blob/main/multiqc.png)
 
 for understanding your fastqc reports better (https://sequencing.qcfail.com )
+In case you want to understand your GC plots : (https://pmc.ncbi.nlm.nih.gov/articles/PMC3378858/)
+
+While alpine is incredibly powerful for high-precision transcript isoform analysis, it is computationally intensive because it models fragmentation probabilities across millions of coordinates. On an 8GB RAM workstation, running alpine across a large, 36-sample dataset will likely max out your memory limits.
+If you are focusing on gene-level differential expression (using your featureCounts matrix), standard normalization within DESeq2 is usually robust enough to handle background variations without needing the heavy mathematical lifting of alpine. (https://pmc.ncbi.nlm.nih.gov/articles/PMC5143225/)
+
+(https://pmc.ncbi.nlm.nih.gov/articles/PMC3378858/)
+(https://pmc.ncbi.nlm.nih.gov/articles/PMC3315510/ : GC content normalisation)
+(https://pmc.ncbi.nlm.nih.gov/articles/PMC3297825/)
+(https://pubmed.ncbi.nlm.nih.gov/23071270/   : sort rRNA to reduce noise)
+(https://pmc.ncbi.nlm.nih.gov/articles/PMC9851315/   : guide for rna seq)
+(https://pmc.ncbi.nlm.nih.gov/articles/PMC11718288/   : batch correction guide )
+
+
+Fastqc gives detailed write up for each graph in the plot (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/)
 
 # Read Trimming: 
 Multiple tools we have  : Trimmomatic , Cutadapt, Fastp(launched in 2019) choosing a tool requires remembering your RAM, how fast it can process an output for you and how easily it can be downloaded and used.
