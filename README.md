@@ -90,6 +90,8 @@ If you are focusing on gene-level differential expression (using your featureCou
 (https://pmc.ncbi.nlm.nih.gov/articles/PMC9851315/   : guide for rna seq)
 (https://pmc.ncbi.nlm.nih.gov/articles/PMC11718288/   : batch correction guide )
 
+# Before mapping look for contamination using- FASTQcScreen
+# After mapping look for GC bias or Duplication using RSeqC or picard
 
 Fastqc gives detailed write up for each graph in the plot (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/)
 
